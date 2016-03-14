@@ -1,0 +1,26 @@
+{
+  "name": "react-native-sk-navigator",
+  "version": "1.0.0",
+  "description": "Component wraps Navigator, easy to push and easy to render different type of navigation bar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shigebeyond/react-native-sk-navigator.git"
+  },
+  "keywords": [
+    "react-native",
+    "navigator",
+    "navigation-bar",
+    "navigator-style",
+    "navigation-bar-style"
+  ],
+  "author": "shigebeyond",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shigebeyond/react-native-sk-navigator/issues"
+  },
+  "homepage": "https://github.com/shigebeyond/react-native-sk-navigator#readme"
+}
