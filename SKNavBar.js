@@ -23,28 +23,31 @@ function getTitleStyle(type){
 var NavigationBarRouteMapper = {
   // 创建导航栏的左按钮
   LeftButton: function(route, navigator, index, navState) {
-    if(index === 0 || route.type == 'none' || route.type == 'simple')
+    if(route.type == 'none' || route.type == 'simple')
       return null;
 
-    var style = [styles.navBarButton, styles.navBarLeftButton],
-        icon = route.leftButtonIcon || (route.leftButtonTitle ? null : require('./img/nav_left.png')),
-        cb = route.onLeftButtonPress ? route.onLeftButtonPress : () => navigator.pop();
-    return (
-      <TouchableOpacity
-        onPress={cb}
-        style={style}>
-        {
-          icon ?
-            <Image source={icon}/> :
-            <Text style={[styles.navBarText, getTitleStyle(route.type)]}>{route.leftButtonTitle}</Text>
-        }
-      </TouchableOpacity>
-    );
+    if((route.leftButtonIcon || route.leftButtonTitle) && route.onLeftButtonPress || index > 0){
+      var style = [styles.navBarButton, styles.navBarLeftButton],
+          icon = route.leftButtonIcon || (route.leftButtonTitle ? null : require('./img/nav_left.png')),
+          cb = route.onLeftButtonPress ? route.onLeftButtonPress : () => navigator.pop();
+      return (
+        <TouchableOpacity
+          onPress={cb}
+          style={style}>
+          {
+            icon ?
+              <Image source={icon}/> :
+              <Text style={[styles.navBarText, getTitleStyle(route.type)]}>{route.leftButtonTitle}</Text>
+          }
+        </TouchableOpacity>
+      );
+    }
+    return null;
   },
 
   // 创建导航栏的右按钮
   RightButton: function(route, navigator, index, navState) {
-    if(index === 0 || route.type == 'none' || route.type == 'simple')
+    if(route.type == 'none' || route.type == 'simple')
       return null;
 
     if((route.rightButtonIcon || route.rightButtonTitle) && route.onRightButtonPress){
