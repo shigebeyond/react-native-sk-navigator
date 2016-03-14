@@ -36,7 +36,7 @@ var NavigationBarRouteMapper = {
         {
           icon ?
             <Image source={icon}/> :
-            <Text style={[styles.navBarTitleText, getTitleStyle(route.type)]}>{route.leftButtonTitle}</Text>
+            <Text style={[styles.navBarText, getTitleStyle(route.type)]}>{route.leftButtonTitle}</Text>
         }
       </TouchableOpacity>
     );
@@ -56,7 +56,7 @@ var NavigationBarRouteMapper = {
           {
             route.rightButtonIcon ?
               <Image source={route.RightButtonIcon}/> :
-              <Text style={[styles.navBarTitleText, getTitleStyle(route.type)]}>{route.rightButtonTitle}</Text>
+              <Text style={[styles.navBarText, getTitleStyle(route.type)]}>{route.rightButtonTitle}</Text>
           }
         </TouchableOpacity>
       );
