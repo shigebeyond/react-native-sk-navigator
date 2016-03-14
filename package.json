@@ -1,6 +1,6 @@
 {
   "name": "react-native-sk-navigator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Component wraps Navigator, easy to push and easy to render different type of navigation bar",
   "main": "index.js",
   "scripts": {

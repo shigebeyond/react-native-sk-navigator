@@ -26,7 +26,7 @@ var NavigationBarRouteMapper = {
     if(route.type == 'none' || route.type == 'simple')
       return null;
 
-    if((route.leftButtonIcon || route.leftButtonTitle) && route.onLeftButtonPress || index > 0){
+    if((route.leftButtonIcon || route.leftButtonTitle) && route.onLeftButtonPress || index > 0){ // 当index > 0,即非首页,默认显示返回按钮
       var style = [styles.navBarButton, styles.navBarLeftButton],
           icon = route.leftButtonIcon || (route.leftButtonTitle ? null : require('./img/nav_left.png')),
           cb = route.onLeftButtonPress ? route.onLeftButtonPress : () => navigator.pop();
